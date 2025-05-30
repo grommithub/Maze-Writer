@@ -1,5 +1,11 @@
 #pragma once
+
+#if CMAKE_BUILD
+#include <SDL2/SDL.h>
+#else
 #include <SDL.h>
+#endif
+
 #include "Constants.h"
 
 struct UpdateTimer
