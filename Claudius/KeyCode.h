@@ -1,9 +1,13 @@
 #pragma once
+#ifdef CMAKE_BUILD
+#include "SDL2/SDL_keycode.h"
+#else
 #include <CodeAnalysis/Warnings.h>
 #pragma warning(push)
 #pragma warning(disable:ALL_CODE_ANALYSIS_WARNINGS)
 #include "SDL_keycode.h"
 #pragma warning (pop)
+#endif
 enum class KeyCode
 {
 	ESCAPE,SPACE,ENTER,

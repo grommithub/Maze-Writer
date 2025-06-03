@@ -6,11 +6,15 @@
 #include "Constants.h"
 #include "Coords.h"
 
+#ifdef CMAKE_BUILD
+#include "SDL2/SDL.h"
+#else
 #pragma warning(push)
 #include <CodeAnalysis/Warnings.h>
 #pragma warning(disable:ALL_CODE_ANALYSIS_WARNINGS)
 #include "SDL.h"
 #pragma warning(pop)
+#endif
 
 struct SDL_Initializer
 {
